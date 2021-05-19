@@ -34,12 +34,17 @@ Partial Class Producto
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuarda = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.cbState = New System.Windows.Forms.ComboBox()
+        Me.cbMedida = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(320, 146)
+        Me.Label1.Location = New System.Drawing.Point(38, 143)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 15)
         Me.Label1.TabIndex = 0
@@ -48,7 +53,7 @@ Partial Class Producto
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(325, 218)
+        Me.Label2.Location = New System.Drawing.Point(43, 199)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 15)
         Me.Label2.TabIndex = 1
@@ -57,7 +62,7 @@ Partial Class Producto
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(336, 284)
+        Me.Label3.Location = New System.Drawing.Point(43, 273)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(46, 15)
         Me.Label3.TabIndex = 2
@@ -65,21 +70,21 @@ Partial Class Producto
         '
         'txtProducto
         '
-        Me.txtProducto.Location = New System.Drawing.Point(408, 143)
+        Me.txtProducto.Location = New System.Drawing.Point(123, 143)
         Me.txtProducto.Name = "txtProducto"
         Me.txtProducto.Size = New System.Drawing.Size(100, 23)
         Me.txtProducto.TabIndex = 3
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(408, 218)
+        Me.txtNombre.Location = New System.Drawing.Point(123, 196)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 23)
         Me.txtNombre.TabIndex = 4
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(408, 281)
+        Me.txtPrecio.Location = New System.Drawing.Point(123, 265)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(100, 23)
         Me.txtPrecio.TabIndex = 5
@@ -122,12 +127,52 @@ Partial Class Producto
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
         Me.DateTimePicker1.TabIndex = 11
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(278, 73)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(491, 274)
+        Me.DataGridView1.TabIndex = 12
+        '
+        'cbState
+        '
+        Me.cbState.FormattingEnabled = True
+        Me.cbState.Location = New System.Drawing.Point(38, 324)
+        Me.cbState.Name = "cbState"
+        Me.cbState.Size = New System.Drawing.Size(121, 23)
+        Me.cbState.TabIndex = 13
+        Me.cbState.Text = "1"
+        '
+        'cbMedida
+        '
+        Me.cbMedida.FormattingEnabled = True
+        Me.cbMedida.Location = New System.Drawing.Point(38, 353)
+        Me.cbMedida.Name = "cbMedida"
+        Me.cbMedida.Size = New System.Drawing.Size(121, 23)
+        Me.cbMedida.TabIndex = 14
+        Me.cbMedida.Text = "1"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(157, 238)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(41, 15)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Label4"
+        '
         'Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.cbMedida)
+        Me.Controls.Add(Me.cbState)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.btnGuarda)
         Me.Controls.Add(Me.btnCancelar)
@@ -140,6 +185,7 @@ Partial Class Producto
         Me.Controls.Add(Me.Label1)
         Me.Name = "Producto"
         Me.Text = "Producto"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -156,4 +202,8 @@ Partial Class Producto
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGuarda As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents cbState As ComboBox
+    Friend WithEvents cbMedida As ComboBox
+    Friend WithEvents Label4 As Label
 End Class
