@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Proyecto_La_Kanasta</RootNamespace>
-    <StartupObject>Proyecto_La_Kanasta.Producto</StartupObject>
+    <StartupObject>Proyecto_La_Kanasta.Empleado</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 

@@ -23,21 +23,23 @@ Partial Class Empleado
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtRpContraseña = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.dgvEmpleado = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -49,38 +51,38 @@ Partial Class Empleado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre:"
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(186, 106)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(138, 23)
-        Me.TextBox1.TabIndex = 1
+        Me.txtNombre.Location = New System.Drawing.Point(186, 106)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(138, 23)
+        Me.txtNombre.TabIndex = 1
         '
-        'Button1
+        'btnCancelar
         '
-        Me.Button1.BackColor = System.Drawing.Color.Gainsboro
-        Me.Button1.Location = New System.Drawing.Point(66, 320)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Cancelar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCancelar.BackColor = System.Drawing.Color.Gainsboro
+        Me.btnCancelar.Location = New System.Drawing.Point(66, 320)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.TabIndex = 2
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnGuardar
         '
-        Me.Button2.Location = New System.Drawing.Point(197, 320)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Guardar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnGuardar.Location = New System.Drawing.Point(197, 320)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.TabIndex = 3
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtUsuario
         '
-        Me.TextBox2.Location = New System.Drawing.Point(186, 183)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(138, 23)
-        Me.TextBox2.TabIndex = 5
+        Me.txtUsuario.Location = New System.Drawing.Point(186, 183)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(138, 23)
+        Me.txtUsuario.TabIndex = 5
         '
         'Label2
         '
@@ -91,12 +93,12 @@ Partial Class Empleado
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Contraseña:"
         '
-        'TextBox3
+        'txtContraseña
         '
-        Me.TextBox3.Location = New System.Drawing.Point(186, 219)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(138, 23)
-        Me.TextBox3.TabIndex = 7
+        Me.txtContraseña.Location = New System.Drawing.Point(186, 219)
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.Size = New System.Drawing.Size(138, 23)
+        Me.txtContraseña.TabIndex = 7
         '
         'Label3
         '
@@ -106,12 +108,12 @@ Partial Class Empleado
         Me.Label3.Size = New System.Drawing.Size(0, 15)
         Me.Label3.TabIndex = 6
         '
-        'TextBox4
+        'txtApellido
         '
-        Me.TextBox4.Location = New System.Drawing.Point(186, 146)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(138, 23)
-        Me.TextBox4.TabIndex = 9
+        Me.txtApellido.Location = New System.Drawing.Point(186, 146)
+        Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.Size = New System.Drawing.Size(138, 23)
+        Me.txtApellido.TabIndex = 9
         '
         'Label4
         '
@@ -121,12 +123,12 @@ Partial Class Empleado
         Me.Label4.Size = New System.Drawing.Size(0, 15)
         Me.Label4.TabIndex = 8
         '
-        'TextBox5
+        'txtRpContraseña
         '
-        Me.TextBox5.Location = New System.Drawing.Point(186, 258)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(138, 23)
-        Me.TextBox5.TabIndex = 11
+        Me.txtRpContraseña.Location = New System.Drawing.Point(186, 258)
+        Me.txtRpContraseña.Name = "txtRpContraseña"
+        Me.txtRpContraseña.Size = New System.Drawing.Size(138, 23)
+        Me.txtRpContraseña.TabIndex = 11
         '
         'Label5
         '
@@ -174,49 +176,61 @@ Partial Class Empleado
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Registrar usuario"
         '
+        'dgvEmpleado
+        '
+        Me.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEmpleado.Location = New System.Drawing.Point(358, 29)
+        Me.dgvEmpleado.Name = "dgvEmpleado"
+        Me.dgvEmpleado.RowTemplate.Height = 25
+        Me.dgvEmpleado.Size = New System.Drawing.Size(403, 314)
+        Me.dgvEmpleado.TabIndex = 16
+        '
         'Empleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
-        Me.ClientSize = New System.Drawing.Size(366, 376)
+        Me.ClientSize = New System.Drawing.Size(773, 376)
+        Me.Controls.Add(Me.dgvEmpleado)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txtRpContraseña)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtApellido)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtContraseña)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnGuardar)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Empleado"
         Me.Text = "Empleado"
+        CType(Me.dgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents txtUsuario As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtContraseña As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtApellido As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtRpContraseña As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents dgvEmpleado As DataGridView
 End Class

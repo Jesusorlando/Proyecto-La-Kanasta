@@ -26,14 +26,14 @@ Partial Class Producto
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtProducto = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtPrecio = New System.Windows.Forms.TextBox()
+        Me.laberHora = New System.Windows.Forms.Label()
+        Me.labelFecha = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGuarda = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -63,66 +63,66 @@ Partial Class Producto
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Precio :"
         '
-        'TextBox1
+        'txtProducto
         '
-        Me.TextBox1.Location = New System.Drawing.Point(408, 143)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 3
+        Me.txtProducto.Location = New System.Drawing.Point(408, 143)
+        Me.txtProducto.Name = "txtProducto"
+        Me.txtProducto.Size = New System.Drawing.Size(100, 23)
+        Me.txtProducto.TabIndex = 3
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Location = New System.Drawing.Point(408, 218)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox2.TabIndex = 4
+        Me.txtNombre.Location = New System.Drawing.Point(408, 218)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(100, 23)
+        Me.txtNombre.TabIndex = 4
         '
-        'TextBox3
+        'txtPrecio
         '
-        Me.TextBox3.Location = New System.Drawing.Point(408, 281)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox3.TabIndex = 5
+        Me.txtPrecio.Location = New System.Drawing.Point(408, 281)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(100, 23)
+        Me.txtPrecio.TabIndex = 5
         '
-        'Label4
+        'laberHora
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(667, 41)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(33, 15)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Hora"
+        Me.laberHora.AutoSize = True
+        Me.laberHora.Location = New System.Drawing.Point(667, 41)
+        Me.laberHora.Name = "laberHora"
+        Me.laberHora.Size = New System.Drawing.Size(33, 15)
+        Me.laberHora.TabIndex = 7
+        Me.laberHora.Text = "Hora"
         '
-        'Label5
+        'labelFecha
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(511, 41)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 15)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Fecha"
+        Me.labelFecha.AutoSize = True
+        Me.labelFecha.Location = New System.Drawing.Point(511, 41)
+        Me.labelFecha.Name = "labelFecha"
+        Me.labelFecha.Size = New System.Drawing.Size(38, 15)
+        Me.labelFecha.TabIndex = 8
+        Me.labelFecha.Text = "Fecha"
         '
         'Timer1
         '
         Me.Timer1.Enabled = True
         '
-        'Button1
+        'btnCancelar
         '
-        Me.Button1.Location = New System.Drawing.Point(251, 385)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Cancelar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCancelar.Location = New System.Drawing.Point(251, 385)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.TabIndex = 9
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnGuarda
         '
-        Me.Button2.Location = New System.Drawing.Point(511, 385)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Guardar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnGuarda.Location = New System.Drawing.Point(511, 385)
+        Me.btnGuarda.Name = "btnGuarda"
+        Me.btnGuarda.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuarda.TabIndex = 10
+        Me.btnGuarda.Text = "Guardar"
+        Me.btnGuarda.UseVisualStyleBackColor = True
         '
         'Producto
         '
@@ -130,13 +130,13 @@ Partial Class Producto
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnGuarda)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.labelFecha)
+        Me.Controls.Add(Me.laberHora)
+        Me.Controls.Add(Me.txtPrecio)
+        Me.Controls.Add(Me.txtNombre)
+        Me.Controls.Add(Me.txtProducto)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -150,12 +150,12 @@ Partial Class Producto
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents txtProducto As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtPrecio As TextBox
+    Friend WithEvents laberHora As Label
+    Friend WithEvents labelFecha As Label
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents btnGuarda As Button
 End Class
