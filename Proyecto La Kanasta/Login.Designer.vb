@@ -26,8 +26,8 @@ Partial Class Form3
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtUser = New System.Windows.Forms.TextBox()
+        Me.txtPass = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,19 +61,19 @@ Partial Class Form3
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Contraseña:"
         '
-        'TextBox1
+        'txtUser
         '
-        Me.TextBox1.Location = New System.Drawing.Point(142, 181)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(147, 23)
-        Me.TextBox1.TabIndex = 3
+        Me.txtUser.Location = New System.Drawing.Point(142, 181)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(147, 23)
+        Me.txtUser.TabIndex = 3
         '
-        'TextBox2
+        'txtPass
         '
-        Me.TextBox2.Location = New System.Drawing.Point(142, 240)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(147, 23)
-        Me.TextBox2.TabIndex = 4
+        Me.txtPass.Location = New System.Drawing.Point(142, 240)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(147, 23)
+        Me.txtPass.TabIndex = 4
         '
         'PictureBox1
         '
@@ -93,8 +93,8 @@ Partial Class Form3
         Me.BackColor = System.Drawing.Color.DarkSalmon
         Me.ClientSize = New System.Drawing.Size(344, 363)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPass)
+        Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
@@ -110,7 +110,7 @@ Partial Class Form3
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtUser As TextBox
+    Friend WithEvents txtPass As TextBox
     Friend WithEvents PictureBox1 As PictureBox
 End Class

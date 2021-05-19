@@ -32,4 +32,8 @@ Public Class Empleado
             MessageBox.Show("Error al agregar")
         End If
     End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Dispose()
+    End Sub
 End Class
