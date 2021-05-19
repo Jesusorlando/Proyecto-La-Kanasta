@@ -16,7 +16,7 @@ Public Class Empleado
     End Sub
 
     Public Sub MostrarDatos()
-        conexion.Consulta("Select * from Empleados", "Empleados")
+        conexion.Consulta("select idEmpleados, Nombre, Apellido from Empleados", "Empleados")
         dgvEmpleado.DataSource = conexion.ds.Tables("Empleados")
 
     End Sub
@@ -35,5 +35,9 @@ Public Class Empleado
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Dispose()
+    End Sub
+
+    Private Sub dgvEmpleado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEmpleado.CellContentClick
+
     End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Ventas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,19 +20,19 @@ Partial Class Ventas
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.btnCancelarVenta = New System.Windows.Forms.Button()
+        Me.btnCancelarArticulo = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnInventario = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -40,6 +40,7 @@ Partial Class Ventas
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -54,10 +55,9 @@ Partial Class Ventas
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lblFecha = New System.Windows.Forms.Label()
-        Me.lblHora = New System.Windows.Forms.Label()
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -70,8 +70,8 @@ Partial Class Ventas
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.SeaShell
-        Me.Panel1.Controls.Add(Me.Button8)
-        Me.Panel1.Controls.Add(Me.Button7)
+        Me.Panel1.Controls.Add(Me.btnCancelarVenta)
+        Me.Panel1.Controls.Add(Me.btnCancelarArticulo)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -81,27 +81,25 @@ Partial Class Ventas
         Me.Panel1.Size = New System.Drawing.Size(350, 138)
         Me.Panel1.TabIndex = 3
         '
-        'Button8
+        'btnCancelarVenta
         '
-        Me.Button8.BackgroundImage = Global.Proyecto_La_Kanasta.My.Resources.Resources.cancelacion
-        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button8.Location = New System.Drawing.Point(15, 9)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(86, 84)
-        Me.Button8.TabIndex = 26
-        Me.Button8.Text = "Button8"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.btnCancelarVenta.BackgroundImage = Global.Proyecto_La_Kanasta.My.Resources.Resources.cancelacion
+        Me.btnCancelarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCancelarVenta.Location = New System.Drawing.Point(15, 9)
+        Me.btnCancelarVenta.Name = "btnCancelarVenta"
+        Me.btnCancelarVenta.Size = New System.Drawing.Size(86, 84)
+        Me.btnCancelarVenta.TabIndex = 26
+        Me.btnCancelarVenta.UseVisualStyleBackColor = True
         '
-        'Button7
+        'btnCancelarArticulo
         '
-        Me.Button7.BackgroundImage = Global.Proyecto_La_Kanasta.My.Resources.Resources.rechazado
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button7.Location = New System.Drawing.Point(135, 11)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(86, 84)
-        Me.Button7.TabIndex = 25
-        Me.Button7.Text = "Button7"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.btnCancelarArticulo.BackgroundImage = Global.Proyecto_La_Kanasta.My.Resources.Resources.rechazado
+        Me.btnCancelarArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCancelarArticulo.Location = New System.Drawing.Point(135, 11)
+        Me.btnCancelarArticulo.Name = "btnCancelarArticulo"
+        Me.btnCancelarArticulo.Size = New System.Drawing.Size(86, 84)
+        Me.btnCancelarArticulo.TabIndex = 25
+        Me.btnCancelarArticulo.UseVisualStyleBackColor = True
         '
         'Button6
         '
@@ -111,7 +109,6 @@ Partial Class Ventas
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(86, 84)
         Me.Button6.TabIndex = 24
-        Me.Button6.Text = "Button6"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Label2
@@ -145,7 +142,7 @@ Partial Class Ventas
         '
         Me.Panel2.BackColor = System.Drawing.Color.SeaShell
         Me.Panel2.Controls.Add(Me.Button5)
-        Me.Panel2.Controls.Add(Me.Button4)
+        Me.Panel2.Controls.Add(Me.btnInventario)
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Label7)
@@ -165,19 +162,17 @@ Partial Class Ventas
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(86, 84)
         Me.Button5.TabIndex = 23
-        Me.Button5.Text = "Button5"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnInventario
         '
-        Me.Button4.BackgroundImage = Global.Proyecto_La_Kanasta.My.Resources.Resources.inventario
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button4.Location = New System.Drawing.Point(124, 11)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(86, 84)
-        Me.Button4.TabIndex = 22
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnInventario.BackgroundImage = Global.Proyecto_La_Kanasta.My.Resources.Resources.inventario
+        Me.btnInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnInventario.Location = New System.Drawing.Point(124, 11)
+        Me.btnInventario.Name = "btnInventario"
+        Me.btnInventario.Size = New System.Drawing.Size(86, 84)
+        Me.btnInventario.TabIndex = 22
+        Me.btnInventario.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -187,7 +182,6 @@ Partial Class Ventas
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(85, 84)
         Me.Button3.TabIndex = 21
-        Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
@@ -198,7 +192,6 @@ Partial Class Ventas
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(84, 84)
         Me.Button2.TabIndex = 20
-        Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label7
@@ -240,11 +233,21 @@ Partial Class Ventas
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Location = New System.Drawing.Point(12, 39)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(350, 32)
         Me.Panel3.TabIndex = 5
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(162, 27)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(47, 15)
+        Me.Label15.TabIndex = 1
+        Me.Label15.Text = "Label15"
         '
         'Label8
         '
@@ -306,6 +309,7 @@ Partial Class Ventas
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 23)
         Me.NumericUpDown1.TabIndex = 18
+        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Button1
         '
@@ -379,28 +383,23 @@ Partial Class Ventas
         Me.Label10.TabIndex = 10
         Me.Label10.Text = "PRODUCTO"
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(460, 12)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
+        Me.DateTimePicker1.TabIndex = 8
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(597, 12)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(47, 15)
+        Me.Label16.TabIndex = 9
+        Me.Label16.Text = "Label16"
+        '
         'Timer1
-        '
-        '
-        'lblFecha
-        '
-        Me.lblFecha.AutoSize = True
-        Me.lblFecha.Location = New System.Drawing.Point(634, 13)
-        Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(47, 15)
-        Me.lblFecha.TabIndex = 8
-        Me.lblFecha.Text = "Label15"
-        '
-        'lblHora
-        '
-        Me.lblHora.AutoSize = True
-        Me.lblHora.Location = New System.Drawing.Point(725, 13)
-        Me.lblHora.Name = "lblHora"
-        Me.lblHora.Size = New System.Drawing.Size(47, 15)
-        Me.lblHora.TabIndex = 9
-        Me.lblHora.Text = "Label16"
-        '
-        'Timer2
         '
         '
         'Ventas
@@ -409,8 +408,8 @@ Partial Class Ventas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(816, 450)
-        Me.Controls.Add(Me.lblHora)
-        Me.Controls.Add(Me.lblFecha)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
@@ -459,14 +458,14 @@ Partial Class Ventas
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnInventario As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents btnCancelarVenta As Button
+    Friend WithEvents btnCancelarArticulo As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents lblFecha As Label
-    Friend WithEvents lblHora As Label
-    Friend WithEvents Timer2 As Timer
 End Class

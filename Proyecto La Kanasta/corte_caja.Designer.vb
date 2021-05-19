@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Corte_caja
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -132,7 +132,7 @@ Partial Class Form1
         Me.DataGridView2.Size = New System.Drawing.Size(179, 28)
         Me.DataGridView2.TabIndex = 10
         '
-        'Form1
+        'Corte_caja
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -149,7 +149,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form1"
+        Me.Name = "Corte_caja"
         Me.Text = "Corte Caja"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()

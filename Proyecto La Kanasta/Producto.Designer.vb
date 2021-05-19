@@ -29,11 +29,11 @@ Partial Class Producto
         Me.txtProducto = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
-        Me.laberHora = New System.Windows.Forms.Label()
         Me.labelFecha = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuarda = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -84,15 +84,6 @@ Partial Class Producto
         Me.txtPrecio.Size = New System.Drawing.Size(100, 23)
         Me.txtPrecio.TabIndex = 5
         '
-        'laberHora
-        '
-        Me.laberHora.AutoSize = True
-        Me.laberHora.Location = New System.Drawing.Point(667, 41)
-        Me.laberHora.Name = "laberHora"
-        Me.laberHora.Size = New System.Drawing.Size(33, 15)
-        Me.laberHora.TabIndex = 7
-        Me.laberHora.Text = "Hora"
-        '
         'labelFecha
         '
         Me.labelFecha.AutoSize = True
@@ -124,16 +115,23 @@ Partial Class Producto
         Me.btnGuarda.Text = "Guardar"
         Me.btnGuarda.UseVisualStyleBackColor = True
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(520, 15)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
+        Me.DateTimePicker1.TabIndex = 11
+        '
         'Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.btnGuarda)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.labelFecha)
-        Me.Controls.Add(Me.laberHora)
         Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtProducto)
@@ -153,9 +151,9 @@ Partial Class Producto
     Friend WithEvents txtProducto As TextBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtPrecio As TextBox
-    Friend WithEvents laberHora As Label
     Friend WithEvents labelFecha As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGuarda As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

@@ -11,7 +11,11 @@
             frm.Show()
             Me.Hide()
         Else
-            MsgBox("No Logeado jajaja")
+            MsgBox("Usuario o Contraseña no admitido")
         End If
+    End Sub
+
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
