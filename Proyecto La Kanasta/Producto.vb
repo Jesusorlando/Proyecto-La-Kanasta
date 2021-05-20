@@ -5,19 +5,17 @@ Public Class Producto
     Dim conexion As Conexion = New Conexion()
 
     Public Sub MostrarDatos()
-        conexion.Consulta("select * from Producto", "Productos")
+        conexion.Consulta("select * from Producto ", "Productos")
         DataGridView1.DataSource = conexion.ds.Tables("Productos")
 
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnGuarda.Click
 
-        Dim fecha As DateTime = DateTime.Now
-        Dim fechaFormateada As String
-        fechaFormateada = fecha.ToString("dd-MM-yyyy")
+        Dim fecha As String = DateTime.Now.ToString("yyyy/MM/dd")
 
-
-        MessageBox.Show("Insert into Producto values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "'," + fechaFormateada + ",'" + txtPrecio.Text + "','" + cbMedida.Text + "'  )")
-        Dim Agregar As String = "Insert into Producto values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "','" + fechaFormateada + "','" + txtPrecio.Text + "','" + cbMedida.Text + "'  )"
+        'MessageBox.Show(fecha)
+        'MessageBox.Show("Insert into Productos values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "','" + fecha + "','" + txtPrecio.Text + "','" + cbMedida.Text + "'  )")
+        Dim Agregar As String = "Insert into Producto values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "','" + fecha + "','" + txtPrecio.Text + "','" + cbMedida.Text + "'  )"
 
         If (conexion.Instertar(Agregar)) Then
             MessageBox.Show("Datos agregados correctamente")
@@ -32,6 +30,8 @@ Public Class Producto
     Private Sub Producto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
         DateTimePicker1.Visible = False
+        cbState.Visible = False
+        cbMedida.Visible = False
 
         conexion.conectar()
         MostrarDatos()
@@ -45,6 +45,7 @@ Public Class Producto
         Dim fecha As String
         fecha = DateTimePicker1.Text
         labelFecha.Text = fecha
+
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -52,13 +53,10 @@ Public Class Producto
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Dim fecha As Date = Today.Date
-        Dim fechaFormateada As String
-        fechaFormateada = fecha.ToString("dd-MM-yyyyhh:mm:ss")
-        MessageBox.Show(fecha)
+        Dispose()
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

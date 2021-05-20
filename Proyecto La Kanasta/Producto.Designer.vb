@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Producto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Producto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,7 +37,6 @@ Partial Class Producto
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.cbState = New System.Windows.Forms.ComboBox()
         Me.cbMedida = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -154,22 +153,12 @@ Partial Class Producto
         Me.cbMedida.TabIndex = 14
         Me.cbMedida.Text = "1"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(157, 238)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 15)
-        Me.Label4.TabIndex = 15
-        Me.Label4.Text = "Label4"
-        '
         'Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cbMedida)
         Me.Controls.Add(Me.cbState)
         Me.Controls.Add(Me.DataGridView1)
@@ -205,5 +194,4 @@ Partial Class Producto
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents cbState As ComboBox
     Friend WithEvents cbMedida As ComboBox
-    Friend WithEvents Label4 As Label
 End Class

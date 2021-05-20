@@ -52,4 +52,19 @@
         fecha = DateTimePicker1.Text
         Label16.Text = fecha
     End Sub
+
+    Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click
+        Dim frm = New Inventario()
+        frm.Location = Me.Location
+        frm.StartPosition = FormStartPosition.Manual
+        frm.Show()
+    End Sub
+
+    Private Sub btnCancelarArticulo_Click(sender As Object, e As EventArgs) Handles btnCancelarArticulo.Click
+
+    End Sub
+
+    Private Sub btnCancelarVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarVenta.Click
+
+    End Sub
 End Class
