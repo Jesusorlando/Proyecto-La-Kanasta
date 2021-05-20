@@ -11,9 +11,13 @@ Public Class Producto
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnGuarda.Click
 
+        Dim fecha As DateTime = DateTime.Now
+        Dim fechaFormateada As String
+        fechaFormateada = fecha.ToString("dd-MM-yyyy")
 
-        MessageBox.Show("Insert into Producto values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "'," + labelFecha.Text + ",'" + txtPrecio.Text + "','" + cbMedida.Text + "'  )")
-        Dim Agregar As String = "Insert into Producto values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "','" + labelFecha.Text + "','" + txtPrecio.Text + "','" + cbMedida.Text + "'  )"
+
+        MessageBox.Show("Insert into Producto values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "'," + fechaFormateada + ",'" + txtPrecio.Text + "','" + cbMedida.Text + "'  )")
+        Dim Agregar As String = "Insert into Producto values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "','" + fechaFormateada + "','" + txtPrecio.Text + "','" + cbMedida.Text + "'  )"
 
         If (conexion.Instertar(Agregar)) Then
             MessageBox.Show("Datos agregados correctamente")
