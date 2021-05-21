@@ -13,22 +13,6 @@ Public Class Perdida
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
-        Dim uno As Int16
-        uno = 5
-
-        MessageBox.Show("insert into Detalle_entrada values ('" + uno + "','" + txtidProducto.Text + "','" + uno + "') ")
-
-
-        ' Dim Agregar As String = "insert into Detalle_entrada values ('" + 2 + "','" + TextBox1.Text + "','" + 2 + "')"
-
-
-        'If (conexion.Instertar(Agregar)) Then
-        'MessageBox.Show("Datos agregados correctamente")
-        '   MostrarDatos()
-
-        'Else
-        '    MessageBox.Show("Error al agregar")
-        'End If
 
     End Sub
 
@@ -41,14 +25,14 @@ Public Class Perdida
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
 
-        Dim Agregar As String = "Insert into (idPerdida, idProducto, Cantidad) Detalle_Perdida values ('" + 2 + "','" + txtidProducto.Text + "','" + 2 + "')"
+        '        Dim Agregar As String = "Insert into (idPerdida, idProducto, Cantidad) Detalle_Perdida values ('" + 2 + "','" + txtidProducto.Text + "','" + 2 + "')"
 
-        If (conexion.Instertar(Agregar)) Then
-            MessageBox.Show("Datos agregados correctamente")
+        '       If (conexion.Instertar(Agregar)) Then
+        '      MessageBox.Show("Datos agregados correctamente")
 
-        Else
-            MessageBox.Show("Error al agregar")
-        End If
+        '      Else
+        '     MessageBox.Show("Error al agregar")
+        '    End If
 
     End Sub
 End Class

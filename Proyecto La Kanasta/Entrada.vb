@@ -22,6 +22,14 @@
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Dim Agregar As String = "Insert into Entrada values ('" + 1 + "','" + 65 + "','" + TextBox1.Text + "' )"
 
+        If (conexion.Instertar(Agregar)) Then
+            MessageBox.Show("Datos agregados correctamente")
+            MostrarDatos()
+
+        Else
+            MessageBox.Show("Error al agregar")
+        End If
     End Sub
 End Class
