@@ -13,8 +13,7 @@ Public Class Producto
 
         Dim fecha As String = DateTime.Now.ToString("yyyy/MM/dd")
 
-        'MessageBox.Show(fecha)
-        'MessageBox.Show("Insert into Productos values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "','" + fecha + "','" + txtPrecio.Text + "','" + cbMedida.Text + "'  )")
+
         Dim Agregar As String = "Insert into Producto values ('" + txtProducto.Text + "','" + txtNombre.Text + "','" + cbState.Text + "','" + fecha + "','" + txtPrecio.Text + "','" + cbMedida.Text + "'  )"
 
         If (conexion.Instertar(Agregar)) Then

@@ -45,6 +45,7 @@
     End Sub
 
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MostrarDatos()
         conexion.conectar()
         Timer1.Start()
         DateTimePicker1.Visible = False
@@ -80,6 +81,27 @@
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        MostrarDatos()
+
+        Dim fecha As String = DateTime.Now.ToString("yyyy/MM/dd")
+
+        Dim idventa As Int32 = 2
+        Dim cantidad As Int32 = 1
+        Dim idproducto As String = TextBox1.Text
+
+        Dim Agregar As String = "Insert into venta2 values (" + idventa + "," + idproducto + "," + cantidad + "," + fecha + ")"
+
+        If (conexion.Instertar(Agregar)) Then
+            MessageBox.Show("Datos agregados correctamente")
+            MostrarDatos()
+
+        Else
+            MessageBox.Show("Error al agregar")
+        End If
+
+
+    End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
+
     End Sub
 End Class

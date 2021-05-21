@@ -45,6 +45,7 @@ Partial Class Ventas
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -57,7 +58,6 @@ Partial Class Ventas
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -296,6 +296,15 @@ Partial Class Ventas
         Me.Panel5.Size = New System.Drawing.Size(800, 224)
         Me.Panel5.TabIndex = 7
         '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(573, 17)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 20
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(617, 111)
@@ -392,15 +401,6 @@ Partial Class Ventas
         '
         'Timer1
         '
-        '
-        'btnAgregar
-        '
-        Me.btnAgregar.Location = New System.Drawing.Point(573, 17)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 20
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'Ventas
         '
