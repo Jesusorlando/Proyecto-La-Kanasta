@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Perdida
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Perdida
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.btnAceptar = New System.Windows.Forms.Button()
@@ -28,8 +28,9 @@ Partial Class Perdida
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtidProducto = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -76,6 +77,7 @@ Partial Class Perdida
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 23)
         Me.NumericUpDown1.TabIndex = 11
+        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'DataGridView1
         '
@@ -86,12 +88,12 @@ Partial Class Perdida
         Me.DataGridView1.Size = New System.Drawing.Size(535, 219)
         Me.DataGridView1.TabIndex = 10
         '
-        'TextBox1
+        'txtidProducto
         '
-        Me.TextBox1.Location = New System.Drawing.Point(196, 138)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(221, 23)
-        Me.TextBox1.TabIndex = 9
+        Me.txtidProducto.Location = New System.Drawing.Point(196, 138)
+        Me.txtidProducto.Name = "txtidProducto"
+        Me.txtidProducto.Size = New System.Drawing.Size(221, 23)
+        Me.txtidProducto.TabIndex = 9
         '
         'Label1
         '
@@ -102,18 +104,28 @@ Partial Class Perdida
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Producto"
         '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(592, 138)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 16
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
         'Perdida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtidProducto)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Perdida"
         Me.Text = "Perdida"
@@ -130,6 +142,7 @@ Partial Class Perdida
     Friend WithEvents Label2 As Label
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtidProducto As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnAgregar As Button
 End Class

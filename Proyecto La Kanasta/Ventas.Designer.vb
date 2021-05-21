@@ -49,7 +49,6 @@ Partial Class Ventas
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -58,6 +57,7 @@ Partial Class Ventas
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -281,11 +281,11 @@ Partial Class Ventas
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.SeaShell
+        Me.Panel5.Controls.Add(Me.btnAgregar)
         Me.Panel5.Controls.Add(Me.TextBox2)
         Me.Panel5.Controls.Add(Me.NumericUpDown1)
         Me.Panel5.Controls.Add(Me.Button1)
         Me.Panel5.Controls.Add(Me.Label14)
-        Me.Panel5.Controls.Add(Me.Label13)
         Me.Panel5.Controls.Add(Me.Label12)
         Me.Panel5.Controls.Add(Me.Label11)
         Me.Panel5.Controls.Add(Me.DataGridView1)
@@ -329,15 +329,6 @@ Partial Class Ventas
         Me.Label14.Size = New System.Drawing.Size(49, 15)
         Me.Label14.TabIndex = 16
         Me.Label14.Text = "Cambio"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(567, 26)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(51, 15)
-        Me.Label13.TabIndex = 15
-        Me.Label13.Text = "Subtotal"
         '
         'Label12
         '
@@ -402,6 +393,15 @@ Partial Class Ventas
         'Timer1
         '
         '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(573, 17)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 20
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -452,7 +452,6 @@ Partial Class Ventas
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Button1 As Button
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents DataGridView1 As DataGridView
@@ -468,4 +467,5 @@ Partial Class Ventas
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents btnAgregar As Button
 End Class

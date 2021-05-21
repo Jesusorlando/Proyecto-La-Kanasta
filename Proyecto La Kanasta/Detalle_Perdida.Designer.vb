@@ -26,12 +26,14 @@ Partial Class Detalle_Perdida
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.MonthCalendar2 = New System.Windows.Forms.MonthCalendar()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MonthCalendar1
         '
         Me.MonthCalendar1.Location = New System.Drawing.Point(65, 31)
+        Me.MonthCalendar1.MaxSelectionCount = 1
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
@@ -46,7 +48,7 @@ Partial Class Detalle_Perdida
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(399, 101)
+        Me.btnBuscar.Location = New System.Drawing.Point(687, 153)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 2
@@ -55,18 +57,25 @@ Partial Class Detalle_Perdida
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(559, 101)
+        Me.btnSalir.Location = New System.Drawing.Point(687, 89)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(75, 23)
         Me.btnSalir.TabIndex = 3
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
+        'MonthCalendar2
+        '
+        Me.MonthCalendar2.Location = New System.Drawing.Point(375, 31)
+        Me.MonthCalendar2.Name = "MonthCalendar2"
+        Me.MonthCalendar2.TabIndex = 4
+        '
         'Detalle_Perdida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.MonthCalendar2)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.DataGridView1)
@@ -82,4 +91,5 @@ Partial Class Detalle_Perdida
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnBuscar As Button
     Friend WithEvents btnSalir As Button
+    Friend WithEvents MonthCalendar2 As MonthCalendar
 End Class
