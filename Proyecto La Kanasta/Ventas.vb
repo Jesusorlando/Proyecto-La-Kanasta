@@ -6,7 +6,7 @@
     Private TotalVenta As Decimal = 0.00
 
     Public Sub MostrarDatos()
-        conexion.Consulta($"SELECT p.IdProducto as 'ID', p.Nombre as 'Producto', pv.Cantidad as 'Cantidad', p.Precio as 'Precio Unitario', (p.Precio * pv.Cantidad) as 'Subtotal' FROM ProductosVenta pv, Producto p, Venta2 v WHERE pv.IdProducto = p.idProducto AND pv.IdVenta = v.idVenta AND v.idVenta = {CurrentVenta}", "Venta")
+        conexion.Consulta($"SELECT pv.Id as 'ID', p.Nombre as 'Producto', pv.Cantidad as 'Cantidad', p.Precio as 'Precio Unitario', (p.Precio * pv.Cantidad) as 'Subtotal' FROM ProductosVenta pv, Producto p, Venta2 v WHERE pv.IdProducto = p.idProducto AND pv.IdVenta = v.idVenta AND v.idVenta = {CurrentVenta}", "Venta")
         DataGridView1.DataSource = conexion.ds.Tables("Venta")
 
         conexion.Consulta($"SELECT SUM(p.Precio * pv.Cantidad)
@@ -103,8 +103,8 @@
     End Sub
 
     Private Sub btnCancelarArticulo_Click(sender As Object, e As EventArgs) Handles btnCancelarArticulo.Click
-        Dim idProducto As String = DataGridView1.SelectedRows(0).Cells.Item(0).Value
-        conexion.Instertar($"DELETE FROM ProductosVenta WHERE IdProducto = '{idProducto}' AND IdVenta = {CurrentVenta}")
+        Dim id As String = DataGridView1.SelectedRows(0).Cells.Item(0).Value
+        conexion.Instertar($"DELETE FROM ProductosVenta WHERE Id = '{id}' AND IdVenta = {CurrentVenta}")
         MostrarDatos()
     End Sub
 
