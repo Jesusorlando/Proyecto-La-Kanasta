@@ -26,15 +26,14 @@ Partial Class Corte_caja
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtDiferencia = New System.Windows.Forms.TextBox()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.txtEfectivo = New System.Windows.Forms.NumericUpDown()
+        CType(Me.txtEfectivo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -73,13 +72,6 @@ Partial Class Corte_caja
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Observaciones"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(157, 85)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(167, 23)
-        Me.TextBox1.TabIndex = 4
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.MenuHighlight
@@ -101,7 +93,7 @@ Partial Class Corte_caja
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(169, 300)
+        Me.RichTextBox1.Location = New System.Drawing.Point(152, 300)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(167, 81)
         Me.RichTextBox1.TabIndex = 7
@@ -114,23 +106,29 @@ Partial Class Corte_caja
         Me.DateTimePicker1.Size = New System.Drawing.Size(228, 23)
         Me.DateTimePicker1.TabIndex = 8
         '
-        'DataGridView1
+        'txtDiferencia
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(157, 166)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(179, 28)
-        Me.DataGridView1.TabIndex = 9
+        Me.txtDiferencia.Location = New System.Drawing.Point(152, 244)
+        Me.txtDiferencia.Name = "txtDiferencia"
+        Me.txtDiferencia.ReadOnly = True
+        Me.txtDiferencia.Size = New System.Drawing.Size(172, 23)
+        Me.txtDiferencia.TabIndex = 10
         '
-        'DataGridView2
+        'txtTotal
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(157, 242)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowTemplate.Height = 25
-        Me.DataGridView2.Size = New System.Drawing.Size(179, 28)
-        Me.DataGridView2.TabIndex = 10
+        Me.txtTotal.Location = New System.Drawing.Point(152, 170)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.ReadOnly = True
+        Me.txtTotal.Size = New System.Drawing.Size(172, 23)
+        Me.txtTotal.TabIndex = 11
+        '
+        'txtEfectivo
+        '
+        Me.txtEfectivo.Location = New System.Drawing.Point(152, 88)
+        Me.txtEfectivo.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.txtEfectivo.Name = "txtEfectivo"
+        Me.txtEfectivo.Size = New System.Drawing.Size(172, 23)
+        Me.txtEfectivo.TabIndex = 12
         '
         'Corte_caja
         '
@@ -138,21 +136,20 @@ Partial Class Corte_caja
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(537, 488)
-        Me.Controls.Add(Me.DataGridView2)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.txtEfectivo)
+        Me.Controls.Add(Me.txtTotal)
+        Me.Controls.Add(Me.txtDiferencia)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Corte_caja"
         Me.Text = "Corte Caja"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtEfectivo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -162,11 +159,11 @@ Partial Class Corte_caja
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents txtDiferencia As TextBox
+    Friend WithEvents txtTotal As TextBox
+    Friend WithEvents txtEfectivo As NumericUpDown
 End Class

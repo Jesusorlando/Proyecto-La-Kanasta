@@ -45,25 +45,27 @@ Partial Class Ventas
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.txtPago = New System.Windows.Forms.TextBox()
+        Me.intCantidad = New System.Windows.Forms.NumericUpDown()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.intCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -281,35 +283,73 @@ Partial Class Ventas
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.SeaShell
+        Me.Panel5.Controls.Add(Me.lblTotal)
+        Me.Panel5.Controls.Add(Me.ComboBox1)
+        Me.Panel5.Controls.Add(Me.Button4)
         Me.Panel5.Controls.Add(Me.btnAgregar)
-        Me.Panel5.Controls.Add(Me.TextBox2)
-        Me.Panel5.Controls.Add(Me.NumericUpDown1)
+        Me.Panel5.Controls.Add(Me.txtPago)
+        Me.Panel5.Controls.Add(Me.intCantidad)
         Me.Panel5.Controls.Add(Me.Button1)
         Me.Panel5.Controls.Add(Me.Label14)
         Me.Panel5.Controls.Add(Me.Label12)
         Me.Panel5.Controls.Add(Me.Label11)
         Me.Panel5.Controls.Add(Me.DataGridView1)
-        Me.Panel5.Controls.Add(Me.TextBox1)
         Me.Panel5.Controls.Add(Me.Label10)
         Me.Panel5.Location = New System.Drawing.Point(12, 223)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(800, 224)
         Me.Panel5.TabIndex = 7
         '
-        'TextBox2
+        'lblTotal
         '
-        Me.TextBox2.Location = New System.Drawing.Point(617, 111)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox2.TabIndex = 19
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(617, 68)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(39, 15)
+        Me.lblTotal.TabIndex = 23
+        Me.lblTotal.Text = "TOTAL"
         '
-        'NumericUpDown1
+        'ComboBox1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(429, 18)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 23)
-        Me.NumericUpDown1.TabIndex = 18
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(102, 16)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(321, 23)
+        Me.ComboBox1.TabIndex = 22
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(654, 16)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(138, 23)
+        Me.Button4.TabIndex = 21
+        Me.Button4.Text = "Nueva venta"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(573, 17)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 20
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
+        'txtPago
+        '
+        Me.txtPago.Location = New System.Drawing.Point(617, 111)
+        Me.txtPago.Name = "txtPago"
+        Me.txtPago.Size = New System.Drawing.Size(100, 23)
+        Me.txtPago.TabIndex = 19
+        '
+        'intCantidad
+        '
+        Me.intCantidad.Location = New System.Drawing.Point(429, 18)
+        Me.intCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.intCantidad.Name = "intCantidad"
+        Me.intCantidad.Size = New System.Drawing.Size(120, 23)
+        Me.intCantidad.TabIndex = 18
+        Me.intCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Button1
         '
@@ -350,20 +390,17 @@ Partial Class Ventas
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(15, 47)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(534, 150)
         Me.DataGridView1.TabIndex = 12
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.Gold
-        Me.TextBox1.Location = New System.Drawing.Point(101, 18)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(313, 23)
-        Me.TextBox1.TabIndex = 11
         '
         'Label10
         '
@@ -393,15 +430,6 @@ Partial Class Ventas
         'Timer1
         '
         '
-        'btnAgregar
-        '
-        Me.btnAgregar.Location = New System.Drawing.Point(573, 17)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 20
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
-        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -427,7 +455,7 @@ Partial Class Ventas
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.intCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -448,14 +476,13 @@ Partial Class Ventas
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents txtPago As TextBox
+    Friend WithEvents intCantidad As NumericUpDown
     Friend WithEvents Button1 As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents btnInventario As Button
     Friend WithEvents Button3 As Button
@@ -468,4 +495,7 @@ Partial Class Ventas
     Friend WithEvents Label16 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnAgregar As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents lblTotal As Label
 End Class
