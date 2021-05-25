@@ -59,6 +59,7 @@ Partial Class Ventas
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnReporteVenta = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -77,7 +78,7 @@ Partial Class Ventas
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 68)
+        Me.Panel1.Location = New System.Drawing.Point(12, 125)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(350, 138)
         Me.Panel1.TabIndex = 3
@@ -150,7 +151,7 @@ Partial Class Ventas
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Location = New System.Drawing.Point(386, 68)
+        Me.Panel2.Location = New System.Drawing.Point(386, 123)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(426, 138)
         Me.Panel2.TabIndex = 4
@@ -236,7 +237,7 @@ Partial Class Ventas
         Me.Panel3.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Location = New System.Drawing.Point(12, 39)
+        Me.Panel3.Location = New System.Drawing.Point(12, 96)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(350, 32)
         Me.Panel3.TabIndex = 5
@@ -264,7 +265,7 @@ Partial Class Ventas
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.Panel4.Controls.Add(Me.Label9)
-        Me.Panel4.Location = New System.Drawing.Point(386, 41)
+        Me.Panel4.Location = New System.Drawing.Point(386, 96)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(426, 32)
         Me.Panel4.TabIndex = 6
@@ -293,7 +294,7 @@ Partial Class Ventas
         Me.Panel5.Controls.Add(Me.Label11)
         Me.Panel5.Controls.Add(Me.DataGridView1)
         Me.Panel5.Controls.Add(Me.Label10)
-        Me.Panel5.Location = New System.Drawing.Point(12, 223)
+        Me.Panel5.Location = New System.Drawing.Point(12, 269)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(800, 224)
         Me.Panel5.TabIndex = 7
@@ -402,7 +403,7 @@ Partial Class Ventas
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(460, 12)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(597, 12)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
         Me.DateTimePicker1.TabIndex = 8
@@ -410,7 +411,7 @@ Partial Class Ventas
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(597, 12)
+        Me.Label16.Location = New System.Drawing.Point(629, 12)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(47, 15)
         Me.Label16.TabIndex = 9
@@ -419,12 +420,22 @@ Partial Class Ventas
         'Timer1
         '
         '
+        'btnReporteVenta
+        '
+        Me.btnReporteVenta.Location = New System.Drawing.Point(84, 30)
+        Me.btnReporteVenta.Name = "btnReporteVenta"
+        Me.btnReporteVenta.Size = New System.Drawing.Size(137, 23)
+        Me.btnReporteVenta.TabIndex = 10
+        Me.btnReporteVenta.Text = "Reporte venta"
+        Me.btnReporteVenta.UseVisualStyleBackColor = True
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
-        Me.ClientSize = New System.Drawing.Size(816, 450)
+        Me.ClientSize = New System.Drawing.Size(816, 505)
+        Me.Controls.Add(Me.btnReporteVenta)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Panel5)
@@ -486,4 +497,5 @@ Partial Class Ventas
     Friend WithEvents Button4 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents lblTotal As Label
+    Friend WithEvents btnReporteVenta As Button
 End Class
