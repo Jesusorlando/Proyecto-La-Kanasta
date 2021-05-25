@@ -147,4 +147,11 @@
     Private Sub lblTotal_Click(sender As Object, e As EventArgs) Handles lblTotal.Click
 
     End Sub
+
+    Private Sub btnReporteVenta_Click(sender As Object, e As EventArgs) Handles btnReporteVenta.Click
+        Dim frm = New Reporte_venta()
+        frm.Location = Me.Location
+        frm.StartPosition = FormStartPosition.Manual
+        frm.Show()
+    End Sub
 End Class
