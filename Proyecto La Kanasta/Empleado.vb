@@ -31,6 +31,11 @@ Public Class Empleado
         Else
             MessageBox.Show("Error al agregar")
         End If
+
+        Dim limpiar As Conexion = New Conexion
+        limpiar.LimpiarCampos(Me)
+
+
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click

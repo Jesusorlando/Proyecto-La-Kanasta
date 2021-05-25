@@ -52,7 +52,6 @@ Partial Class Ventas
         Me.txtPago = New System.Windows.Forms.TextBox()
         Me.intCantidad = New System.Windows.Forms.NumericUpDown()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -290,7 +289,6 @@ Partial Class Ventas
         Me.Panel5.Controls.Add(Me.txtPago)
         Me.Panel5.Controls.Add(Me.intCantidad)
         Me.Panel5.Controls.Add(Me.Button1)
-        Me.Panel5.Controls.Add(Me.Label14)
         Me.Panel5.Controls.Add(Me.Label12)
         Me.Panel5.Controls.Add(Me.Label11)
         Me.Panel5.Controls.Add(Me.DataGridView1)
@@ -360,15 +358,6 @@ Partial Class Ventas
         Me.Button1.TabIndex = 17
         Me.Button1.Text = "Cobrar"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(558, 148)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(49, 15)
-        Me.Label14.TabIndex = 16
-        Me.Label14.Text = "Cambio"
         '
         'Label12
         '
@@ -479,7 +468,6 @@ Partial Class Ventas
     Friend WithEvents txtPago As TextBox
     Friend WithEvents intCantidad As NumericUpDown
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents DataGridView1 As DataGridView

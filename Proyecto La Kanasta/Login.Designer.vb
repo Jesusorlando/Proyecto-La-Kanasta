@@ -72,6 +72,7 @@ Partial Class Form3
         '
         Me.txtPass.Location = New System.Drawing.Point(142, 240)
         Me.txtPass.Name = "txtPass"
+        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.txtPass.Size = New System.Drawing.Size(147, 23)
         Me.txtPass.TabIndex = 4
         '

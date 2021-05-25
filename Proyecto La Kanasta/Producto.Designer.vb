@@ -37,6 +37,7 @@ Partial Class Producto
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.cbState = New System.Windows.Forms.ComboBox()
         Me.cbMedida = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -138,7 +139,7 @@ Partial Class Producto
         'cbState
         '
         Me.cbState.FormattingEnabled = True
-        Me.cbState.Location = New System.Drawing.Point(38, 324)
+        Me.cbState.Location = New System.Drawing.Point(12, 415)
         Me.cbState.Name = "cbState"
         Me.cbState.Size = New System.Drawing.Size(121, 23)
         Me.cbState.TabIndex = 13
@@ -147,11 +148,19 @@ Partial Class Producto
         'cbMedida
         '
         Me.cbMedida.FormattingEnabled = True
-        Me.cbMedida.Location = New System.Drawing.Point(38, 353)
+        Me.cbMedida.Location = New System.Drawing.Point(160, 414)
         Me.cbMedida.Name = "cbMedida"
         Me.cbMedida.Size = New System.Drawing.Size(121, 23)
         Me.cbMedida.TabIndex = 14
         Me.cbMedida.Text = "1"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(102, 324)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox1.TabIndex = 15
         '
         'Producto
         '
@@ -159,6 +168,7 @@ Partial Class Producto
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.cbMedida)
         Me.Controls.Add(Me.cbState)
         Me.Controls.Add(Me.DataGridView1)
@@ -194,4 +204,5 @@ Partial Class Producto
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents cbState As ComboBox
     Friend WithEvents cbMedida As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

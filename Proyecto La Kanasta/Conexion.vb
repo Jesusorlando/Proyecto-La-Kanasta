@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Conexion
-    Public conexion As SqlConnection = New SqlConnection("Data Source=tcp:192.168.100.21\SQLEXPRESS,1444;Initial Catalog=BDKanasta;Persist Security Info=True;User ID=admin;Password=12345")
+    Public conexion As SqlConnection = New SqlConnection("Data Source=DESKTOP-4NV35QT\SQLEXPRESS;Initial Catalog=BDKanasta;Integrated Security=True")
     Private cmb As SqlCommandBuilder
     Public ds As DataSet = New DataSet()
     Public da As SqlDataAdapter
@@ -38,6 +38,20 @@ Public Class Conexion
             Return False
         End If
     End Function
+
+    Public Sub LimpiarCampos(ByVal control As Form)
+        Dim txt As Object
+        Dim txtTemporal As TextBox
+
+        For Each txt In control.Controls
+            If TypeOf txt Is TextBox Then
+                txtTemporal = CType(txt, TextBox)
+                txtTemporal.Clear()
+            End If
+
+        Next
+
+    End Sub
 
 
 End Class

@@ -20,6 +20,8 @@
         End If
 
         lblTotal.Text = TotalVenta.ToString()
+
+
     End Sub
 
     Public Sub RellenarComboProductos()
@@ -83,6 +85,8 @@
         NuevaVenta()
         MostrarDatos()
         RellenarComboProductos()
+
+        Button4.Visible = False
     End Sub
 
     Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
@@ -110,6 +114,7 @@
 
     Private Sub btnCancelarVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarVenta.Click
         NuevaVenta()
+        MostrarDatos()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -135,5 +140,11 @@
         conexion.Instertar($"UPDATE Venta2 SET total = {TotalVenta} WHERE idVenta = {CurrentVenta}")
         NuevaVenta()
         MostrarDatos()
+    End Sub
+
+
+
+    Private Sub lblTotal_Click(sender As Object, e As EventArgs) Handles lblTotal.Click
+
     End Sub
 End Class

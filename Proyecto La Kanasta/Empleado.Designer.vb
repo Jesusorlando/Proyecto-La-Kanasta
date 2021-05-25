@@ -97,6 +97,7 @@ Partial Class Empleado
         '
         Me.txtContraseña.Location = New System.Drawing.Point(186, 219)
         Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.txtContraseña.Size = New System.Drawing.Size(138, 23)
         Me.txtContraseña.TabIndex = 7
         '
@@ -127,6 +128,7 @@ Partial Class Empleado
         '
         Me.txtRpContraseña.Location = New System.Drawing.Point(186, 258)
         Me.txtRpContraseña.Name = "txtRpContraseña"
+        Me.txtRpContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(9679)
         Me.txtRpContraseña.Size = New System.Drawing.Size(138, 23)
         Me.txtRpContraseña.TabIndex = 11
         '
