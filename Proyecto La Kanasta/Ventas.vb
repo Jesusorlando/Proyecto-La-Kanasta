@@ -161,4 +161,11 @@
         frm.StartPosition = FormStartPosition.Manual
         frm.Show()
     End Sub
+
+    Private Sub btnAgregarPerdida_Click(sender As Object, e As EventArgs) Handles btnAgregarPerdida.Click
+        Dim frm = New Perdida2
+        frm.Location = Me.Location
+        frm.StartPosition = FormStartPosition.Manual
+        frm.Show()
+    End Sub
 End Class
