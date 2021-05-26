@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Proyecto_La_Kanasta</RootNamespace>
-    <StartupObject>Proyecto_La_Kanasta.Reporte_venta</StartupObject>
+    <StartupObject>Proyecto_La_Kanasta.Ventas</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
@@ -29,6 +29,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Update="Entrada2.vb" />
   </ItemGroup>
 
   <ItemGroup>

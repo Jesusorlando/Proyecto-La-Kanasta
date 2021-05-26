@@ -154,4 +154,11 @@
         frm.StartPosition = FormStartPosition.Manual
         frm.Show()
     End Sub
+
+    Private Sub btnEntradas_Click(sender As Object, e As EventArgs) Handles btnEntradas.Click
+        Dim frm = New Entrada2()
+        frm.Location = Me.Location
+        frm.StartPosition = FormStartPosition.Manual
+        frm.Show()
+    End Sub
 End Class
