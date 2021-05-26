@@ -60,6 +60,7 @@ Partial Class Ventas
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnReporteVenta = New System.Windows.Forms.Button()
+        Me.btnEntradas = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -429,12 +430,22 @@ Partial Class Ventas
         Me.btnReporteVenta.Text = "Reporte venta"
         Me.btnReporteVenta.UseVisualStyleBackColor = True
         '
+        'btnEntradas
+        '
+        Me.btnEntradas.Location = New System.Drawing.Point(270, 30)
+        Me.btnEntradas.Name = "btnEntradas"
+        Me.btnEntradas.Size = New System.Drawing.Size(129, 23)
+        Me.btnEntradas.TabIndex = 11
+        Me.btnEntradas.Text = "Agregar Entrada"
+        Me.btnEntradas.UseVisualStyleBackColor = True
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(816, 505)
+        Me.Controls.Add(Me.btnEntradas)
         Me.Controls.Add(Me.btnReporteVenta)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -498,4 +509,5 @@ Partial Class Ventas
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents lblTotal As Label
     Friend WithEvents btnReporteVenta As Button
+    Friend WithEvents btnEntradas As Button
 End Class

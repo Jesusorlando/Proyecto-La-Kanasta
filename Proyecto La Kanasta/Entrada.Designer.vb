@@ -23,16 +23,17 @@ Partial Class Entrada
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.intCantidad = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.lblFecha = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.lblTotal = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.intCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,13 +45,6 @@ Partial Class Entrada
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Producto"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(200, 117)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(221, 23)
-        Me.TextBox1.TabIndex = 1
-        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -60,13 +54,13 @@ Partial Class Entrada
         Me.DataGridView1.Size = New System.Drawing.Size(535, 219)
         Me.DataGridView1.TabIndex = 2
         '
-        'NumericUpDown1
+        'intCantidad
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(452, 115)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 23)
-        Me.NumericUpDown1.TabIndex = 3
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.intCantidad.Location = New System.Drawing.Point(452, 115)
+        Me.intCantidad.Name = "intCantidad"
+        Me.intCantidad.Size = New System.Drawing.Size(120, 23)
+        Me.intCantidad.TabIndex = 3
+        Me.intCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label2
         '
@@ -113,36 +107,55 @@ Partial Class Entrada
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(184, 114)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(223, 23)
+        Me.ComboBox1.TabIndex = 9
+        '
+        'lblTotal
+        '
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Location = New System.Drawing.Point(713, 213)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(41, 15)
+        Me.lblTotal.TabIndex = 10
+        Me.lblTotal.Text = "Label3"
+        '
         'Entrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblTotal)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.intCantidad)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Entrada"
         Me.Text = "Entrada"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.intCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents intCantidad As NumericUpDown
     Friend WithEvents Label2 As Label
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnAceptar As Button
     Friend WithEvents lblFecha As Label
     Friend WithEvents btnAgregar As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents lblTotal As Label
 End Class
