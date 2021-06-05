@@ -2,7 +2,7 @@
 
     Dim conexion As Conexion = New Conexion()
 
-    Private CurrentVenta As Integer = 0 ' hay que quitar esta verga
+    Private CurrentVenta As Integer = 0
     Private TotalVenta As Decimal = 0.00
 
     Public Sub MostrarDatos()
@@ -138,8 +138,15 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         conexion.Instertar($"UPDATE Venta2 SET total = {TotalVenta} WHERE idVenta = {CurrentVenta}")
-        NuevaVenta()
-        MostrarDatos()
+
+        If (txtPago.Text >= lblTotal.Text) Then
+            NuevaVenta()
+            MostrarDatos()
+            lblTotal.Text = 0.00
+            txtPago.Text = ""
+        Else
+            MessageBox.Show("Cantidad de pago invalida")
+        End If
     End Sub
 
 
