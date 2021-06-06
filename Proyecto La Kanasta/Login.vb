@@ -18,4 +18,18 @@
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub txtPass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPass.KeyPress
+        If (e.KeyChar.ToString = "'") Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtPass_MouseDown(sender As Object, e As MouseEventArgs) Handles txtPass.MouseDown
+        If (e.Button = Windows.Forms.MouseButtons.Right) Then
+            MsgBox("No se permite utilizar el boton derecho del mouse en este campo",
+            MsgBoxStyle.Critical, "Atencion")
+            Exit Sub
+        End If
+    End Sub
 End Class

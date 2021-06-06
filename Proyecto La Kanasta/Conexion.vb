@@ -24,6 +24,7 @@ Public Class Conexion
         ds.Tables.Clear()
         da = New SqlDataAdapter(sql, conexion)
         cmb = New SqlCommandBuilder(da)
+
         da.Fill(ds, tabla)
     End Sub
 
