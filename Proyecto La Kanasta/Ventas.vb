@@ -2,7 +2,7 @@
 
     Dim conexion As Conexion = New Conexion()
 
-    Private CurrentVenta As Integer = 0 ' hay que quitar esta verga
+    Private CurrentVenta As Integer = 0
     Private TotalVenta As Decimal = 0.00
 
     Public Sub MostrarDatos()
@@ -107,9 +107,14 @@
     End Sub
 
     Private Sub btnCancelarArticulo_Click(sender As Object, e As EventArgs) Handles btnCancelarArticulo.Click
-        Dim id As String = DataGridView1.SelectedRows(0).Cells.Item(0).Value
-        conexion.Instertar($"DELETE FROM ProductosVenta WHERE Id = '{id}' AND IdVenta = {CurrentVenta}")
-        MostrarDatos()
+        Try
+            Dim id As String = DataGridView1.SelectedRows(0).Cells.Item(0).Value
+            conexion.Instertar($"DELETE FROM ProductosVenta WHERE Id = '{id}' AND IdVenta = {CurrentVenta}")
+            MostrarDatos()
+
+        Catch ex As Exception
+            MessageBox.Show("No se selecciono el producto para cancelar")
+        End Try
     End Sub
 
     Private Sub btnCancelarVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarVenta.Click
@@ -138,8 +143,15 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         conexion.Instertar($"UPDATE Venta2 SET total = {TotalVenta} WHERE idVenta = {CurrentVenta}")
-        NuevaVenta()
-        MostrarDatos()
+
+        If (txtPago.Text >= lblTotal.Text) Then
+            NuevaVenta()
+            MostrarDatos()
+            lblTotal.Text = 0.00
+            txtPago.Text = ""
+        Else
+            MessageBox.Show("Cantidad de pago invalida")
+        End If
     End Sub
 
 
@@ -160,5 +172,19 @@
         frm.Location = Me.Location
         frm.StartPosition = FormStartPosition.Manual
         frm.Show()
+    End Sub
+
+    Private Sub btnAgregarPerdida_Click(sender As Object, e As EventArgs) Handles btnAgregarPerdida.Click
+        Dim frm = New Perdida2
+        frm.Location = Me.Location
+        frm.StartPosition = FormStartPosition.Manual
+        frm.Show()
+    End Sub
+
+    Private Sub txtPago_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPago.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not Char.IsPunctuation(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not Char.IsPunctuation(e.KeyChar) Then
+            MsgBox("Solo Puede digitar numeros")
+        End If
     End Sub
 End Class

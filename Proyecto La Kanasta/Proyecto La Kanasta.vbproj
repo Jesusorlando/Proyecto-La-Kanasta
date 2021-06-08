@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Proyecto_La_Kanasta</RootNamespace>
-    <StartupObject>Proyecto_La_Kanasta.Ventas</StartupObject>
+    <StartupObject>Proyecto_La_Kanasta.Form3</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Perdida2.vb" />
     <Compile Update="My Project\Resources.Designer.vb">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

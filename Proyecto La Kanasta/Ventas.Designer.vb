@@ -61,6 +61,7 @@ Partial Class Ventas
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnReporteVenta = New System.Windows.Forms.Button()
         Me.btnEntradas = New System.Windows.Forms.Button()
+        Me.btnAgregarPerdida = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -439,12 +440,22 @@ Partial Class Ventas
         Me.btnEntradas.Text = "Agregar Entrada"
         Me.btnEntradas.UseVisualStyleBackColor = True
         '
+        'btnAgregarPerdida
+        '
+        Me.btnAgregarPerdida.Location = New System.Drawing.Point(432, 30)
+        Me.btnAgregarPerdida.Name = "btnAgregarPerdida"
+        Me.btnAgregarPerdida.Size = New System.Drawing.Size(129, 23)
+        Me.btnAgregarPerdida.TabIndex = 12
+        Me.btnAgregarPerdida.Text = "Agregar Perdida"
+        Me.btnAgregarPerdida.UseVisualStyleBackColor = True
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
         Me.ClientSize = New System.Drawing.Size(816, 505)
+        Me.Controls.Add(Me.btnAgregarPerdida)
         Me.Controls.Add(Me.btnEntradas)
         Me.Controls.Add(Me.btnReporteVenta)
         Me.Controls.Add(Me.Label16)
@@ -510,4 +521,5 @@ Partial Class Ventas
     Friend WithEvents lblTotal As Label
     Friend WithEvents btnReporteVenta As Button
     Friend WithEvents btnEntradas As Button
+    Friend WithEvents btnAgregarPerdida As Button
 End Class
