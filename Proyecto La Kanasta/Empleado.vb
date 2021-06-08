@@ -22,18 +22,44 @@ Public Class Empleado
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim Agregar As String = "Insert into Empleados values ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtUsuario.Text + "','" + txtContraseña.Text + "'  )"
-        'MessageBox.Show(Agregar)
-        If (conexion.Instertar(Agregar)) Then
-            MessageBox.Show("Datos agregados correctamente")
-            MostrarDatos()
+
+        Dim cnx = New Conexion()
+        Dim valido = txtUsuario.Text
+        cnx.Consulta($"select usuario from empleados where usuario = '{valido}' ", "lol")
+
+        If (cnx.ds.Tables("lol").Rows.Count < 0) Then
+
+            Try
+
+                If (txtNombre.Text = "" Or txtApellido.Text = "" Or txtUsuario.Text = "" Or txtContraseña.Text = "" Or txtRpContraseña.Text = "") Then
+
+                    MessageBox.Show("Campos vacios invalidos")
+
+
+                Else
+
+                    Dim Agregar As String = "Insert into Empleados values ('" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtUsuario.Text + "','" + txtContraseña.Text + "'  )"
+
+                    If (conexion.Instertar(Agregar)) Then
+                        MessageBox.Show("Datos agregados correctamente")
+                        MostrarDatos()
+
+                    Else
+                        MessageBox.Show("Error al agregar")
+                    End If
+
+                    Dim limpiar As Conexion = New Conexion
+                    limpiar.LimpiarCampos(Me)
+
+                End If
+            Catch ex As Exception
+                MessageBox.Show("No se permiten caracteres tipo "" '' . ; ")
+            End Try
 
         Else
-            MessageBox.Show("Error al agregar")
+            MessageBox.Show("El usuario ya existe")
         End If
 
-        Dim limpiar As Conexion = New Conexion
-        limpiar.LimpiarCampos(Me)
 
 
     End Sub
