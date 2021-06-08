@@ -16,18 +16,42 @@ Public Class Producto
 
         Dim fecha As String = DateTime.Now.ToString("yyyy/MM/dd")
         Dim cantidad As Integer = 1
-        Dim Agregar As String = $"Insert into Producto values ('{txtProducto.Text}','{txtNombre.Text}',{cbState.Text},'{fecha}',{txtPrecio.Text},{cbMedida.Text},{cantidad} )"
 
-        If (conexion.Instertar(Agregar)) Then
-            MessageBox.Show("Datos agregados correctamente")
-            MostrarDatos()
+        Try
 
-        Else
-            MessageBox.Show("Error al agregar")
-        End If
+            Dim cnx = New Conexion()
+            Dim valido = txtNombre.Text
+            cnx.Consulta($"select nombre from producto where nombre = '{valido}' ", "lal")
 
-        Dim limpiar As Conexion = New Conexion
-        limpiar.LimpiarCampos(Me)
+            If (cnx.ds.Tables("lal").Rows.Count > 0) Then
+                MessageBox.Show("El producto ya existe :(")
+
+            Else
+
+                If (txtNombre.Text = "" Or txtPrecio.Text = "" Or txtProducto.Text = "") Then
+
+                    MessageBox.Show("No se aceptan campos vacios :D")
+
+                Else
+
+                    Dim Agregar As String = $"Insert into Producto values ('{txtProducto.Text}','{txtNombre.Text}',{cbState.Text},'{fecha}',{txtPrecio.Text},{cbMedida.Text},{cantidad} )"
+
+                    If (conexion.Instertar(Agregar)) Then
+                        MessageBox.Show("Datos agregados correctamente")
+                        MostrarDatos()
+
+                    Else
+                        MessageBox.Show("Error al agregar")
+                    End If
+
+                    Dim limpiar As Conexion = New Conexion
+                    limpiar.LimpiarCampos(Me)
+
+                End If
+            End If
+        Catch x As Exception
+            MessageBox.Show("No se admiten caracteres "" '' ")
+        End Try
     End Sub
 
     Private Sub Producto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -67,5 +91,12 @@ Public Class Producto
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub txtPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio.KeyPress
+        e.Handled = Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not Char.IsPunctuation(e.KeyChar)
+        If Not IsNumeric(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not Char.IsPunctuation(e.KeyChar) Then
+            MsgBox("Solo Puede digitar numeros")
+        End If
     End Sub
 End Class
