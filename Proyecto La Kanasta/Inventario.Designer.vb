@@ -34,12 +34,12 @@ Partial Class Inventario
         Me.DataGridView1.Location = New System.Drawing.Point(32, 30)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(722, 240)
+        Me.DataGridView1.Size = New System.Drawing.Size(331, 240)
         Me.DataGridView1.TabIndex = 0
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(572, 351)
+        Me.btnAceptar.Location = New System.Drawing.Point(202, 326)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 1
@@ -48,7 +48,7 @@ Partial Class Inventario
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(121, 326)
+        Me.btnAgregar.Location = New System.Drawing.Point(106, 326)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
         Me.btnAgregar.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class Inventario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(390, 450)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.DataGridView1)

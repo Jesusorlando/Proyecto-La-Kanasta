@@ -3,7 +3,7 @@
     Dim conexion As Conexion = New Conexion()
 
     Public Sub MostrarDatos()
-        conexion.Consulta("select Id, pe.idProducto, pe.Cantidad , Fecha  from ProductosEntrada pe, Producto p where p.idProducto = pe.idProducto", "Inventario")
+        conexion.Consulta("select pe.idProducto, SUM(pe.Cantidad) - SUM(pv.Cantidad)  as 'Cantidad'  from ProductosEntrada pe, ProductosVenta pv where pe.idProducto = pv.IdProducto group by pe.IdProducto, pv.IdProducto ", "Inventario")
         DataGridView1.DataSource = conexion.ds.Tables("Inventario")
 
     End Sub
@@ -18,6 +18,7 @@
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexion.conectar()
         MostrarDatos()
+        btnAgregar.Visible = False
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
