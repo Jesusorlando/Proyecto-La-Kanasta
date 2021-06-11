@@ -3,7 +3,7 @@
     Dim conexion As Conexion = New Conexion()
 
     Public Sub MostrarDatos()
-        conexion.Consulta("select pe.idProducto, SUM(pe.Cantidad) - SUM(pv.Cantidad)  as 'Cantidad'  from ProductosEntrada pe, ProductosVenta pv where pe.idProducto = pv.IdProducto group by pe.IdProducto, pv.IdProducto ", "Inventario")
+        conexion.Consulta("select idProducto , SUM(pe.Cantidad) as 'Cantidad' from ProductosEntrada pe group by idProducto", "Inventario")
         DataGridView1.DataSource = conexion.ds.Tables("Inventario")
 
     End Sub

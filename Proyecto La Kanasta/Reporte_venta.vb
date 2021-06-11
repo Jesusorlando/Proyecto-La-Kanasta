@@ -3,7 +3,7 @@
     Dim conexion As Conexion = New Conexion()
 
     Public Sub MostrarDatos()
-        conexion.Consulta($" select v.idVenta as 'Venta', fecha as 'Fecha', IdProducto as 'Producto', Cantidad, total  from Venta2 v , ProductosVenta pv where v.idVenta = pv.IdVenta AND fecha between '{txtInicio.Text}' and '{txtFin.Text}' ", "ReporteVenta")
+        conexion.Consulta($" select v.idVenta as 'Venta', fecha as 'Fecha', idProducto as 'Producto', Cantidad, total  from Venta2 v , ProductosVenta pv where v.idVenta = v.IdVenta AND fecha between '{txtInicio.Text}' and '{txtFin.Text}' ", "ReporteVenta")
         DataGridView1.DataSource = conexion.ds.Tables("ReporteVenta")
     End Sub
     Private Sub Reporte_venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
