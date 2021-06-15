@@ -72,6 +72,20 @@ Public Class Inventario
                 pdfcell.BackgroundColor = BaseColor.LIGHT_GRAY
                 pdftable.AddCell(pdfcell)
 
+                Dim imagenURL As String = "C:\Users\orlan\OneDrive\Escritorio\Proyecto La Kanasta\Proyecto La Kanasta\My Project/unnamed.png"
+                Dim imagenBMP As iTextSharp.text.Image
+                imagenBMP = iTextSharp.text.Image.GetInstance(imagenURL)
+                imagenBMP.ScaleToFit(100.0F, 140.0F)
+                imagenBMP.SpacingBefore = 20.0F
+                imagenBMP.SpacingAfter = 10.0F
+                imagenBMP.SetAbsolutePosition(100, 750)
+
+
+
+                Dim encabezado As New Paragraph("PRODUCTOS INVENTARIO", New Font(Font.Name = "Tahoma", 20, Font.Bold))
+
+                'Se crea el texto abajo del encabezado.
+                Dim texto As New Phrase("Reporte productos:" + Now.Date(), New Font(Font.Name = "Tahoma", 14, Font.Bold))
 
                 Dim dt As DataTable = GetDateTable()
 
@@ -85,6 +99,9 @@ Public Class Inventario
                     Next
                 Next
 
+                doc.Add(imagenBMP)
+                doc.Add(encabezado)
+                doc.Add(texto)
                 doc.Add(pdftable)
                 doc.Close()
 
