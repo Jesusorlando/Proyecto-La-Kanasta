@@ -2,7 +2,7 @@
 
     Dim conexion As Conexion = New Conexion()
     Public Sub MostrarDatos()
-        conexion.Consulta($" select idProducto as 'Producto',idPerdida as 'ID', Cantidad  from ProductosPerdida ", "Detalle_perdida")
+        conexion.Consulta($" select idProducto as 'Producto',idPerdida as 'Numero de Registro', Cantidad  from ProductosPerdida ", "Detalle_perdida")
         DataGridView1.DataSource = conexion.ds.Tables("Detalle_perdida")
     End Sub
 
