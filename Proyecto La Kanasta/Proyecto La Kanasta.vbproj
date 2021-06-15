@@ -20,6 +20,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>itextsharp.xtra.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Perdida2.vb" />
     <Compile Update="My Project\Resources.Designer.vb">
       <DesignTime>True</DesignTime>
