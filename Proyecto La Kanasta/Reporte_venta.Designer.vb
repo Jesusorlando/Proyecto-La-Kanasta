@@ -22,6 +22,7 @@ Partial Class Reporte_venta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reporte_venta))
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btbAceptar = New System.Windows.Forms.Button()
@@ -142,6 +143,7 @@ Partial Class Reporte_venta
         Me.Controls.Add(Me.btbAceptar)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.MonthCalendar1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Reporte_venta"
         Me.Text = "Reporte_venta"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

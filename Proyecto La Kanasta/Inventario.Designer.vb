@@ -22,48 +22,51 @@ Partial Class Inventario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inventario))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnPDF = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(32, 30)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(722, 240)
+        Me.DataGridView1.Size = New System.Drawing.Size(331, 240)
         Me.DataGridView1.TabIndex = 0
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(572, 351)
+        Me.btnAceptar.Location = New System.Drawing.Point(202, 326)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
         Me.btnAceptar.TabIndex = 1
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
-        'btnAgregar
+        'btnPDF
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(121, 326)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 2
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.btnPDF.Location = New System.Drawing.Point(106, 326)
+        Me.btnPDF.Name = "btnPDF"
+        Me.btnPDF.Size = New System.Drawing.Size(75, 23)
+        Me.btnPDF.TabIndex = 2
+        Me.btnPDF.Text = "PDF"
+        Me.btnPDF.UseVisualStyleBackColor = True
         '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btnAgregar)
+        Me.ClientSize = New System.Drawing.Size(390, 450)
+        Me.Controls.Add(Me.btnPDF)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Inventario"
         Me.Text = "Inventario"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -73,5 +76,5 @@ Partial Class Inventario
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnAceptar As Button
-    Friend WithEvents btnAgregar As Button
+    Friend WithEvents btnPDF As Button
 End Class
